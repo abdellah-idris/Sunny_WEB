@@ -1,0 +1,151 @@
+@charset "UTF-8";
+body{ 
+  background-image: url(../images/background.png);
+  background-position: center ;	
+  background-repeat: no-repeat;	
+  background-attachment: fixed;		
+  background-size: cover;	
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  font-family: arial, Times, serif;
+  animation-name: slidein;
+  animation-duration:2s;
+  animation-delay: 0s;
+}
+nav.menus{
+ border: solid  2px;
+ position: fixed;
+ 
+}
+nav.menus ul.menu{
+  list-style: none;
+   }
+li{
+   text-align: left;
+}
+div.conteneur{
+   margin-left: 150px;
+}
+div.contenu{
+  border: thick double #264040;
+  padding:5px 10px;
+  margin-top: 10px;
+ 
+  
+}
+h1{
+ font-size: 36px;
+ text-align: center;
+ width: 80%;
+  margin: auto;
+  color: red;
+}
+h2{
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+p{
+  
+   word-spacing: 1px;
+   letter-spacing: 0.4px;
+   font-size: 17px;
+   text-align:  justify;
+}
+abbr{
+  color: green;
+  font-size: 18px;
+}
+.enum{
+  font-style:  italic;
+}
+a:link {
+  color: red;
+  font-weight:  bolder;
+  text-decoration: underline;
+}
+a:visited {
+  color: blue ;
+}
+a:hover {
+ color: red;
+ text-decoration: none;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px whitesmoke;
+  transform: scale(1.08);
+}
+
+img.images{
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+ 
+ 
+}
+img.sflag{
+  width: 26px;
+  height: 21px;
+  
+ }
+img.flag{
+  display:  inline-block;
+  width: 100px;
+  height: 80px;
+  margin: 5px ;
+  border-radius: 8px;
+  
+}
+
+table{
+  border-collapse: collapse;
+  border: solid 2px;
+  margin:auto;
+  margin-top: 20px
+}
+caption{
+  margin: 5px;
+  font-size: 22px;
+  font-weight:  bold;
+  color: red;
+  border:  solid black 3px;
+  }
+
+td{
+  border : solid  2px;
+  }
+
+
+time{
+    color: OrangeRed;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:500px){ 
+  p{
+    font-size: 16px;
+    text-align:  justify;
+} 
+}
+@keyframes slidein {
+  from {
+    margin-left : 100%;
+    width: 300%;
+    
+  }
+
+  to {
+    margin-left:  0%;
+    width: 100%;
+  }
+}
+
+  
+  
+  
+  
+
