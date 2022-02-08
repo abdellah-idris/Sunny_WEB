@@ -1,0 +1,276 @@
+html:
+<link rel="icon" href="../images/Flag_of_Norway.png" /> : utiliser pour créer une icone.
+
+CSS:
+
+1-commun:
+background-image: url(../images/background.png); image d'arriére plan 
+
+a:link {
+  color: red;
+  font-weight:  bolder;                                                      : lien normal qui n'a pas encore était visité
+  text-decoration: underline;
+}
+a:visited {
+  color: blue ;                                                                     : un lien que l'utilisateur a déja visité
+}
+a:hover {
+ color: red;                                                                        : quand la souris de l''utilisateur  est sur le lien donc il perd la décoration 
+ text-decoration: none;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px whitesmoke;                  : quand la souris de l''utilisateur est sur l'image  on remarque un zoom de 110%
+transform: scale(1.1);
+}
+
+@media screen and (max-width:500px){                   :  lorsque la taille de lécran  est inférieure à 500px la taille du texte passe de 18px à 16px
+  p{
+    font-size: 16px;
+    text-align:  justify;
+} 
+}
+
+@keyframes slidein {                                                   : animation  qui fait un passage de la droite vers la gauche avec une modification de la taille des blocs
+  from {                                                                               
+    margin-left : 100%;
+    width: 300%;
+    
+  }
+
+  to {
+    margin-left:  0%;
+    width: 100%;
+  }
+}
+
+body{
+animation-name: slidein;                                   : l'animation s'applique sur le corps du code. avec un délai de 0s et une durée de 2s
+  animation-duration:2s;
+  animation-delay: 0s;
+}
+
+
+1.1-selecteur :
+nav.menus ul.menu                                             : les éléments ul de la classe menu descendants de nav de la classe menus 
+a:link-----a:visited----a:hover                     
+img.sflag ----img.flag
+
+
+2-sommaire.css
+
+@media screen and (max-width:700px){       : en s'appliquant spécialement au document index.html .Lorsque l'écran est inférieur à 701px
+				on remarque que l'image  disparaît tout enétant remplacée par un texte
+  span.pic img{
+    display: none;			avec des des régles css spécifique  au différéents élements 
+  }
+  span.pic{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: dashed red 1px;
+    display: block;
+    }
+  body{
+    				
+    text-decoration: none;
+    }
+  div.conteneur{			
+    margin: 0px;
+  }
+  h1{
+    position: relative;
+    font-size: 22px;			
+
+  }
+  h2{				
+    font-size: 20px;
+  }
+  p{
+    font-size: 16px;
+    word-spacing: 0px;
+  letter-spacing: 0px;
+  }
+ 
+   nav.menus{
+    top:0px;
+    position: relative;			
+    margin: auto;			
+    margin-top: 2px;
+    width: 30%;
+    }
+  li{
+    text-align: left;
+  }
+  div.conteneur{
+    position:  relative;
+    top: 30px;
+     }
+  caption{
+     border: 1px solid black;
+    font-size: 16px;
+  }
+  .conteneur table.tablesommaire{  : l'élements table de la classe tablesommaire qui sont descendants de tous les éléments avec la classe conteneur(div.conteneur)
+    width: 80%;
+    position: inherit;
+    border: 1px solid black;
+    font-size: 16px;
+  }
+  footer{
+    position: relative;
+    top: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 430px) {                             en s'appliquant spécialement au document index.html .lorsque l'écran est inférieur à 431px
+ table,					     en remarque la disparition des img.sflag du menus et la transformation du tableau avec un display block 
+tr,
+ td {
+  display: block;
+   }
+  tr,caption{
+    margin-left: 40px;
+  }
+  nav.menus{
+    top:0px;
+    position: relative;
+    margin: auto;
+    margin-top: 2px;
+    width: 50%;
+    }
+  nav.menus li{
+    display: block;
+  }
+   img{
+   display: none;
+  }
+}
+
+
+
+3-theme:
+
+h1.norvege{
+    background-image: url("../images/Coat_of_arms_of_Norway.png");                               : une image à coté de chaque titre qui représente le blason de chaque pays
+   }
+h1.suisse{
+    background-image: url("../images/Coat_of_Arms_of_Switzerland.png");
+    }
+h1.australie{
+   background-image: url("../images/Coat_of_Arms_of_Australia.png");
+}
+
+
+
+@media screen and (max-width:700px){     		: en s'appliquant spécialement au document index.html .lorsque l'écran est inférieur à 700px
+  img{					disparition des images sauf pour les images ayant un titre localisation .lors du clique sur la photo à l'intérieur du tableau 
+					en a accés à google maps avec la localisation du pays.	
+    display: none;				en remarque aussi la nouvelle dispostion du menu qui se place en haut de la page 
+    visibility: hidden;
+  }
+  img.images{
+   display: none;
+  }
+  img[title='localisation']{
+    visibility:  visible;
+    
+  }
+  nav.menus{
+    top:0px;
+    position: relative;
+    margin: auto;
+    margin-top: 2px;
+    width: 30%;
+    }
+  div.conteneur{
+    position:  relative;
+    margin: auto;
+    
+     }
+  div.contenu{
+    margin: 0px;
+  }
+  header{
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  li.ancre{
+    display: inline;
+    text-align: center;
+  }
+  table#table{
+   margin: auto;
+    
+  }
+  span.himg{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    border: dashed red 1px;
+    
+  }
+  div.contenu{
+    margin-top: 10px;
+  }
+   p{
+    font-size: 16px;
+    word-spacing: 0px;
+  letter-spacing: 0px;
+  }
+  h1{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width:701px){    : le texte qui remplace l'image de la classe images disparaît
+  span.himg{
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 430px) {		: en s'appliquant spécialement au document index.html .lorsque l'écran est inférieur à  700px
+ table,					le tableau change de forme avec un display en block 
+tr,					
+ td {
+  display: block;
+  }				: afin d'aider l'utilisateur pour étudier le tableau en utiliissait différentes couleurs pour le simplifier (en utilisant des sélecteurs très précis)
+  tr:nth-child(odd) td {			:les td descendant des tr qui sont des enfants impairs ont une couleur grise
+  background-color: LightSlateGrey;
+}
+   tr:nth-child(even) td {			:les td descendant des tr qui sont des enfants pairs ont une couleur blanche avec un arrière-plan noir 	
+  background-color: black;
+     color: white;
+}
+   tr td[rowspan] {				: les td avec la classe rowspan qui sont descendants de tr prenne un arrière-plan  rouge avec une couleur blanche
+  background-color: red;
+  color:white;
+}
+   img[title='localisation']{
+    visibility:  visible;				: les éléments image avec l'attribut title reste visible est en cliquant dessus en accéde à google maps qui révéle la postion du pays
+    
+  }
+  li{
+    text-indent: -30px;
+  }
+}
+
+
+
+3.1-selecteur:
+img[title='localisation']
+img[title='localisation']:hover
+
+tr:hover {background-color: white;}  		 : lors du passage de la souris sur les tr on à un arriére-plan blanc afin de bien identifier le tr ou en se situe 
+tr:nth-child(odd) {				 les tr  qui sont des enfants impairs  ont un arriére plan qui ne change pas de couleur whitesmoke 
+  background-color: whitesmoke;		c'est pour cella qu'il se situe en desous du tr:hover 
+}
+
+
+div.contenu p > strong			Tout les élements strong fils de p qui est descnedant de div appartenant à la classe centenu
+div.contenu p > span.capital			Tout les élements span appartenant à la classe capital  fils de p qui est descnedant de div appartenant à la classe centenu
+div.contenu p > span.ville			tout les élements span appartenant à la classe ville fils de p qui est descnedant de div appartenant à la classe centenu
+div.contenu p > span.pays			tout les élements span appartenant à la classe pays fils de p qui est descnedant de div appartenant à la classe centenu
+div.contenu p > .ressource			Tout les élements appartenant à la classe ressource  fils de p qui est descnedant de div appartenant à la classe centenu
+
+

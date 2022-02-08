@@ -1,0 +1,179 @@
+
+header{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  border: solid black 2px;
+  margin-bottom: 10px;
+}
+h1{
+   background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 10px 0px;
+}
+h1.norvege{
+    background-image: url("../images/Coat_of_arms_of_Norway.png");
+   }
+h1.suisse{
+    background-image: url("../images/Coat_of_Arms_of_Switzerland.png");
+    }
+h1.australie{
+   background-image: url("../images/Coat_of_Arms_of_Australia.png");
+}
+.headimg{
+  width:50%;
+  margin-left: auto;
+  margin-top: 10px;
+ 
+  }
+ul.ancre{
+  list-style: none;
+}
+li.ancre{
+  width: 100px;
+  display: inline-block;
+  
+}
+img[title='localisation']{
+  width: 70%;
+  margin: auto;
+  padding: 5px;
+  display: block;
+  
+}
+img[title='localisation']:hover{
+  transform: scale(1.05); 
+}
+tr:hover {background-color: white;}
+tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+td{
+  text-align: center;
+  margin-top: 12px;
+}
+td[rowspan]{
+  color:red ;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: black;
+  
+}
+div.contenu p > strong{
+  color: red;
+  font-size: 18px;
+ font-style:  italic; 
+}
+div.contenu p > span.capital{
+  font-weight: bold;
+  font-size: 18px;
+}
+div.contenu p > span.ville{
+  font-style: italic;
+  font-size: 18px;
+  }
+div.contenu p > span.pays{
+  
+  text-shadow: 1px 1px grey;
+  
+  font-size: 18px;
+}
+div.contenu p > .ressource{
+  text-decoration: underline dotted red;
+  font-size: 18px;
+  
+}
+
+@media screen and (max-width:700px){
+  img{
+    display: none;
+    visibility: hidden;
+  }
+  img.images{
+   display: none;
+  }
+  img[title='localisation']{
+    visibility:  visible;
+    
+  }
+  nav.menus{
+    top:0px;
+    position: relative;
+    margin: auto;
+    margin-top: 2px;
+    width: 30%;
+    }
+  div.conteneur{
+    position:  relative;
+    margin: auto;
+    
+     }
+  div.contenu{
+    margin: 0px;
+  }
+  header{
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  li.ancre{
+    display: inline;
+    text-align: center;
+  }
+  table#table{
+   margin: auto;
+    
+  }
+  span.himg{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    border: dashed red 1px;
+    
+  }
+  div.contenu{
+    margin-top: 10px;
+  }
+   p{
+    font-size: 16px;
+    word-spacing: 0px;
+  letter-spacing: 0px;
+  }
+  h1{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width:701px){
+  span.himg{
+    visibility: hidden;
+  }
+  
+}
+@media screen and (max-width: 430px) {
+ 
+ table,
+tr,
+ td {
+  display: block;
+  }
+  tr:nth-child(odd) td {
+  background-color: LightSlateGrey;
+}
+   tr:nth-child(even) td {
+  background-color: black;
+     color: white;
+}
+   tr td[rowspan] {
+  background-color: red;
+  color:white;
+}
+   img[title='localisation']{
+    visibility:  visible;
+    
+  }
+  li{
+    text-indent: -30px;
+  }
+}
+
